@@ -1,0 +1,12 @@
+line-length = 135
+target-version = "py310"
+
+[lint]
+# Gated in CI. `ruff check --select B` adds flake8-bugbear suggestions (explicit zip(strict=),
+# unused loop variables); they are advisory here because several of these lines are quoted
+# verbatim in the handbook.
+select = ["E", "F", "W", "I", "UP"]
+
+[lint.per-file-ignores]
+# I denotes image intensity, matching the Harris formulation in the handbook.
+"python/camera_sim.py" = ["E741"]

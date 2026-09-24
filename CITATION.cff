@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: Sensor Fusion Lab
+message: If you use this lab or its figures, please cite it.
+type: software
+authors:
+  - family-names: Jabbala
+    given-names: Gunasekar
+version: 0.1.0
+date-released: "2026-09-24"
+license: MIT
+repository-code: "https://github.com/jabbala10-bit/sensor-fusion-lab"
+abstract: >-
+  Nine from-scratch programs teaching sensor fusion for autonomous systems:
+  lidar obstacle detection (RANSAC, KD-tree, Euclidean clustering, L-shape box
+  fitting), camera geometry and time to collision (Harris, SIFT, descriptor
+  matching, IoU and NMS), FMCW radar (range-Doppler processing, 2D CA-CFAR,
+  angle of arrival, GNN multi-target tracking) and Kalman filtering (KF, EKF
+  with Jacobians, UKF with the CTRV model, NIS consistency). Every lab
+  simulates its own sensor, so no dataset is required.
+keywords:
+  - sensor-fusion
+  - autonomous-driving
+  - lidar
+  - radar
+  - computer-vision
+  - kalman-filter
+  - unscented-kalman-filter
+  - ransac
+  - cfar
+  - multi-target-tracking

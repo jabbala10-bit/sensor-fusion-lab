@@ -1,5 +1,8 @@
 # Sensor Fusion Lab
 
+[![ci](https://github.com/jabbala10-bit/sensor-fusion-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/jabbala10-bit/sensor-fusion-lab/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Runnable companion to the Sensor Fusion Mastery Handbook: four C++ programs and five Python
 simulations covering lidar obstacle detection, camera geometry and time to collision, FMCW radar,
 and Kalman filtering. Everything is written from scratch — RANSAC, KD-tree, FFT, CFAR, the
@@ -68,3 +71,18 @@ the same library versions reproduces them.
 - The PCL and YOLO snippets in the handbook are reference code, not part of this build: PCL is not
   a dependency here, and no network weights are shipped.
 - Exercises for each section live in the handbook tab for that section.
+
+## Project files
+
+| File | Purpose |
+| --- | --- |
+| `Makefile` | `make cpp`, `make py`, `make lint`, `make clean` |
+| `cpp/CMakeLists.txt` | Builds the four C++ labs, skipping any whose dependency is absent |
+| `python/requirements.txt` | numpy, scipy, matplotlib, opencv-python |
+| `ruff.toml`, `.clang-format`, `.editorconfig` | Lint and format settings used by CI and editors |
+| `.github/workflows/ci.yml` | Builds and runs every lab on both toolchains, uploads the figures |
+| `CONTRIBUTING.md` | Ground rules: reproducible seeds, optional dependencies, handbook stays in sync |
+| `CHANGELOG.md` | Versioned history |
+| `reference-output/` | Figures and images from the reference run, for comparison |
+| `CITATION.cff` | Citation metadata |
+| `LICENSE` | MIT |
